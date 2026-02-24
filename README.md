@@ -1,4 +1,4 @@
-🛡 GuardTool
+🛡 # GuardTool
 
 ASP.NET Production & Security Scanner
 Catch production-breaking misconfigurations before they ship.
