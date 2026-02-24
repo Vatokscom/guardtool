@@ -1,0 +1,14 @@
+GuardTool.Cli/assets/
+GuardTool.Cli/bin/
+GuardTool.Cli/obj/
+
+GuardTool.Cli/GuardTool.Cli.csproj
+GuardTool.Cli/Program.cs
+
+GuardTool.Core/
+
+GuardTool.Cashboard/
+
+GuardTool_TestTarget/
+
+GuardTool.sln

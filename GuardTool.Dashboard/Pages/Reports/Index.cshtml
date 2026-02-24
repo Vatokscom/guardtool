@@ -1,0 +1,126 @@
+@page
+@{
+    ViewData["Title"] = "Reports";
+}
+
+<div class="card">
+  <div class="header-row">
+    <div>
+      <h1 class="h1">Reports</h1>
+      <div class="small">All generated reports (HTML/JSON)</div>
+    </div>
+    <div class="actions">
+  <a class="btn" href="/">Back</a>
+
+  <a class="btn" id="zip50" href="/download/reports.zip?take=50">Download ZIP (50)</a>
+  <a class="btn" id="zip200" href="/download/reports.zip?take=200">Download ZIP (200)</a>
+
+  <a class="btn primary" id="latestHtml" href="/download/latest/html">Latest HTML</a>
+  <a class="btn primary" id="latestJson" href="/download/latest/json">Latest JSON</a>
+  <a class="btn primary" id="latestSarifBtn" href="/download/latest/sarif" style="display:none;">Latest SARIF</a>
+</div>
+  </div>
+
+  <div class="filters">
+    <input class="input" id="q" placeholder="Search report filename..." />
+    <select class="select" id="onlyNewCrit">
+      <option value="">Only new Critical?</option>
+      <option value="1">Yes</option>
+    </select>
+    <button class="btn primary" onclick="render()">Filter</button>
+  </div>
+
+  <table class="table">
+    <thead class="thead">
+      <tr>
+        <th>Name</th>
+        <th>Grade</th>
+        <th>Score</th>
+        <th>Status</th>
+        <th>Counts</th>
+        <th>New Crit</th>
+        <th>Open</th>
+      </tr>
+    </thead>
+    <tbody id="tb"></tbody>
+  </table>
+</div>
+
+<script>
+async function load(){
+  const res = await fetch('/api/reports');
+  if(!res.ok){
+    console.error("API failed:", res.status, await res.text());
+    window._reports = [];
+    const hasReports = (window._reports || []).length > 0;
+
+    ['zip50','zip200','latestHtml','latestJson','latestSarifBtn'].forEach(id=>{
+        const el = document.getElementById(id);
+        if(el && !hasReports) el.classList.add('disabled-link');
+    });
+    render();
+    return;
+  }
+  const text = await res.text();
+  window._reports = text ? JSON.parse(text) : [];
+
+    const latestHasSarif = (window._reports || []).some(r => r.hasSarif);
+  if(latestHasSarif){
+    const btn = document.getElementById('latestSarifBtn');
+    if(btn) btn.style.display = '';
+  }
+
+  render();
+}
+
+function gradeClass(g){ return g ? ("grade-" + g) : ""; }
+function statusClass(s){
+  if(!s) return "";
+  return "status-" + String(s).replace(/\s+/g,'');
+}
+
+function render(){
+  const q = (document.getElementById('q').value||'').toLowerCase();
+  const onlyNew = (document.getElementById('onlyNewCrit').value||'');
+  let rows = (window._reports||[]).slice();
+
+  if (onlyNew) rows = rows.filter(r => (r.newCritical||0) > 0);
+  if (q) rows = rows.filter(r => String(r.name||"").toLowerCase().includes(q));
+
+  rows.sort((a,b)=> String(b.timestamp||"").localeCompare(String(a.timestamp||"")));
+
+  const tb = document.getElementById('tb');
+  tb.innerHTML = '';
+
+  rows.forEach(r=>{
+    const ts = r.timestamp ? new Date(r.timestamp).toLocaleString() : '';
+    const htmlName = (r.name||'').replace('.json','.html');
+
+    const tr = document.createElement('tr');
+    tr.className = (r.newCritical||0) > 0 ? 'row hot' : 'row';
+    const sarifName = (r.name||'').replace('_report.json','_report.sarif.json');
+    const sarifBtn = r.hasSarif ? `<a class="btn" href="/reports/${sarifName}" target="_blank">SARIF</a>` : ``;
+
+    tr.innerHTML = `
+      <td>
+        <div style="font-weight:600">${r.name||''}</div>
+        <div class="small">${ts}</div>
+      </td>
+      <td><span class="badge ${gradeClass(r.grade)}">${r.grade||''}</span></td>
+      <td>${r.score ?? ''}/100</td>
+      <td><span class="badge ${statusClass(r.status)}">${r.status||''}</span></td>
+      <td class="muted">C:${r.critical??0} H:${r.high??0} M:${r.medium??0} L:${r.low??0}</td>
+      <td><span class="badge">${r.newCritical??0}</span></td>
+      <td>
+        <a class="btn" href="/reports/${htmlName}" target="_blank">HTML</a>
+        <a class="btn" href="/reports/${r.name}" target="_blank">JSON</a>
+        ${sarifBtn}
+      </td>
+    `;
+    tb.appendChild(tr);
+  });
+}
+
+['q','onlyNewCrit'].forEach(id => document.getElementById(id).addEventListener('input', render));
+load();
+</script>

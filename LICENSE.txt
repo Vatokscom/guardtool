@@ -1,0 +1,19 @@
+GuardTool Proprietary License
+
+Copyright (c) 2026 Vatoks.com
+All rights reserved.
+
+GuardTool, including all source code, compiled binaries, documentation, designs, architecture, and related materials (the “Software”), is the exclusive property of Vatoks.com.
+
+This Software is proprietary and confidential.
+
+No part of the Software may be copied, reproduced, modified, distributed, sublicensed, sold, rented, leased, reverse engineered, decompiled, disassembled, or otherwise exploited without prior written permission from Vatoks.com.
+
+Use of the Software does not grant any ownership or intellectual property rights. All rights, title, and interest in and to the Software remain solely with Vatoks.com.
+
+Vatoks.com may provide the Software free of charge at its sole discretion. Vatoks.com reserves the right to introduce paid plans, subscription models, feature limitations, license enforcement mechanisms, or pricing changes in future versions without obligation to maintain free access.
+
+Unauthorized use of the Software may result in suspension of access, termination of license rights, and/or legal action.
+
+For licensing inquiries:
+https://vatoks.com
