@@ -20,7 +20,7 @@ GuardTool detects:
 
 🌍 Dangerous CORS configurations
 
-🔐 Weak JWT validation
+🔐 JWT validation
 
 🚫 Missing HTTPS redirection
 
@@ -240,8 +240,3 @@ Open an issue first to discuss.
 GuardTool aims to become:
 
 The production-readiness standard for ASP.NET applications.
-
-👨‍💻 Author
-
-Built by Efe
-ASP.NET-focused backend engineering.](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
