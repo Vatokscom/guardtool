@@ -1,4 +1,0 @@
-C:\Users\efe\Desktop\GuardTool\GuardTool.Dashboard\bin\Release\net8.0\win-x64\publish\GuardTool.Dashboard.pdb
-C:\Users\efe\Desktop\GuardTool\GuardTool.Dashboard\bin\Release\net8.0\win-x64\publish\aspnetcorev2_inprocess.dll
-C:\Users\efe\Desktop\GuardTool\GuardTool.Dashboard\bin\Release\net8.0\win-x64\publish\GuardTool.Core.pdb
-C:\Users\efe\Desktop\GuardTool\GuardTool.Dashboard\bin\Release\net8.0\win-x64\publish\GuardTool.Dashboard.exe
