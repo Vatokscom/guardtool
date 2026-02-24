@@ -219,7 +219,6 @@ Slack / Teams alerts
 Policy configuration files
 
 ## 🎯 Roadmap
->>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
  Pro licensing system
 
@@ -234,7 +233,6 @@ Policy configuration files
  Custom rule authoring SDK
 
 ## 🛡 Philosophy
->>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
 GuardTool is built on one principle:
 
