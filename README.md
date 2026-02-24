@@ -223,7 +223,7 @@ Focused on real risks
 
 📄 License
 
-MIT (Community Edition)
+Proprietary – All Rights Reserved
 
 🤝 Contributing
 
