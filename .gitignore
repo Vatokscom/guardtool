@@ -7,7 +7,7 @@ GuardTool.Cli/Program.cs
 
 GuardTool.Core/
 
-GuardTool.Cashboard/
+GuardTool.Dashboard/
 
 GuardTool_TestTarget/
 
