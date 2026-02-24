@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 🛡 GuardTool
 
 ASP.NET Production & Security Scanner
@@ -6,6 +7,18 @@ Catch production-breaking misconfigurations before they ship.
 GuardTool is a developer-first CLI tool and dashboard that analyzes ASP.NET Core projects for real-world production and security risks — not just code smells.
 
 Unlike generic static analyzers, GuardTool focuses on misconfiguration, middleware order, security hardening, and deployment risks.
+=======
+# 🛡 GuardTool
+[Nuget Page](https://www.nuget.org/packages/GuardTool.Tool/)
+
+![ASP.NET Production & Security Scanner](https://github.com/Vatokscom/guardtool/blob/main/GuardTool_1.png?raw=true)
+## ASP.NET Production & Security Scanner
+### Catch production-breaking misconfigurations before they ship.
+![ASP.NET Production & Security Scanner](https://github.com/Vatokscom/guardtool/blob/main/GuardTool_2.png?raw=true)
+***GuardTool is a developer-first CLI tool and dashboard that analyzes ASP.NET Core projects for real-world production and security risks — not just code smells.***
+
+***Unlike generic static analyzers, GuardTool focuses on misconfiguration, middleware order, security hardening, and deployment risks.***
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
 🚀 Why GuardTool?
 
@@ -14,6 +27,7 @@ Your tests pass.
 
 But is it production-safe?
 
+<<<<<<< HEAD
 GuardTool detects:
 
 🔓 Hardcoded secrets
@@ -35,15 +49,44 @@ GuardTool detects:
 📦 Missing production configs
 
 🛑 Debug logging in production
+=======
+## GuardTool detects:
+
+**🔓 Hardcoded secrets**
+
+**🌍 Dangerous CORS configurations**
+
+**🔐 JWT validation**
+
+**🚫 Missing HTTPS redirection**
+
+**📄 Swagger exposed in production**
+
+**⚠ Missing rate limiting**
+
+**🧨 EF Core raw SQL risks**
+
+**🧱 Middleware ordering problems**
+
+**📦 Missing production configs**
+
+**🛑 Debug logging in production**
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
 and many more...
 
 ✨ Features
 🔍 Production-First Rules
 
+<<<<<<< HEAD
 Focused on real ASP.NET production misconfiguration risks.
 
 📊 Risk Scoring
+=======
+### Focused on real ASP.NET production misconfiguration risks.
+![ASP.NET Production & Security Scanner](https://github.com/Vatokscom/guardtool/blob/main/GuardTool_3.png?raw=true)
+## 📊 Risk Scoring
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
 Each scan generates:
 
@@ -55,7 +98,11 @@ Severity breakdown
 
 Status summary
 
+<<<<<<< HEAD
 📄 Multiple Output Formats
+=======
+## 📄 Multiple Output Formats
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
 JSON
 
@@ -63,7 +110,11 @@ HTML
 
 SARIF (CI/CD integration)
 
+<<<<<<< HEAD
 📈 Dashboard
+=======
+## 📈 Dashboard
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
 Interactive web dashboard:
 
@@ -75,24 +126,41 @@ Export ZIP bundles
 
 Risk overview
 
+<<<<<<< HEAD
 🚦 CI/CD Ready
+=======
+## 🚦 CI/CD Ready
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
 Fail builds automatically:
 
 --fail-on=critical
 --fail-on=high
+<<<<<<< HEAD
 🧠 Baseline Support
 
 Track only new critical issues over time.
 
 📦 Installation
+=======
+## 🧠 Baseline Support
+
+Track only new critical issues over time.
+
+## 📦 Installation
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 Install as a .NET Tool
 dotnet tool install GuardTool.Tool --add-source <path-to-nupkg>
 
 Or update:
 
 dotnet tool update GuardTool.Tool --add-source <path-to-nupkg>
+<<<<<<< HEAD
 🧪 Usage
+=======
+
+## 🧪 Usage
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 🔍 Scan a project
 guardtool scan --root .
 With HTML + SARIF
@@ -127,6 +195,10 @@ Each scan generates:
 yyyyMMdd_HHmmss_report.json
 yyyyMMdd_HHmmss_report.html
 yyyyMMdd_HHmmss_report.sarif.json
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 🧱 Project Architecture
 GuardTool.Core        → Rules engine, scanning logic
 GuardTool.Cli         → .NET tool entry point
@@ -135,6 +207,10 @@ GuardTool.Dashboard   → Razor Pages dashboard
 GitHub Actions
 - name: Run GuardTool
   run: guardtool scan --root . --fail-on=critical
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 📌 Command Reference
 scan
 guardtool scan <rootPath>
@@ -151,7 +227,12 @@ guardtool dashboard <rootPath>
     | --root <rootPath>
     [--out <dir>]
     [--port=5180]
+<<<<<<< HEAD
 🟢 Community Edition
+=======
+    
+## 🟢 Community Edition
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
 The current version includes:
 
@@ -165,7 +246,11 @@ JSON / HTML / SARIF export
 
 Baseline tracking
 
+<<<<<<< HEAD
 🔵 Pro Edition (Planned)
+=======
+## 🔵 Pro Edition (Planned)
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
 Advanced JWT validation analysis
 
@@ -185,7 +270,11 @@ Slack / Teams alerts
 
 Policy configuration files
 
+<<<<<<< HEAD
 🎯 Roadmap
+=======
+## 🎯 Roadmap
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
  Pro licensing system
 
@@ -199,7 +288,11 @@ Policy configuration files
 
  Custom rule authoring SDK
 
+<<<<<<< HEAD
 🛡 Philosophy
+=======
+## 🛡 Philosophy
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
 GuardTool is built on one principle:
 
@@ -217,7 +310,11 @@ Focused on real risks
 
 📄 License
 
+<<<<<<< HEAD
 MIT (Community Edition)
+=======
+Proprietary – All Rights Reserved
+>>>>>>> 9648cd3dee774ff5dedcb36e617d4281b84386e0
 
 🤝 Contributing
 
