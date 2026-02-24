@@ -1,11 +1,11 @@
-🛡 # GuardTool
+# 🛡 GuardTool
 
-ASP.NET Production & Security Scanner
-Catch production-breaking misconfigurations before they ship.
+## ASP.NET Production & Security Scanner
+### Catch production-breaking misconfigurations before they ship.
 
-GuardTool is a developer-first CLI tool and dashboard that analyzes ASP.NET Core projects for real-world production and security risks — not just code smells.
+***GuardTool is a developer-first CLI tool and dashboard that analyzes ASP.NET Core projects for real-world production and security risks — not just code smells.***
 
-Unlike generic static analyzers, GuardTool focuses on misconfiguration, middleware order, security hardening, and deployment risks.
+***Unlike generic static analyzers, GuardTool focuses on misconfiguration, middleware order, security hardening, and deployment risks.***
 
 🚀 Why GuardTool?
 
@@ -14,36 +14,36 @@ Your tests pass.
 
 But is it production-safe?
 
-GuardTool detects:
+## GuardTool detects:
 
-🔓 Hardcoded secrets
+**🔓 Hardcoded secrets**
 
-🌍 Dangerous CORS configurations
+**🌍 Dangerous CORS configurations**
 
-🔐 JWT validation
+**🔐 JWT validation**
 
-🚫 Missing HTTPS redirection
+**🚫 Missing HTTPS redirection**
 
-📄 Swagger exposed in production
+**📄 Swagger exposed in production**
 
-⚠ Missing rate limiting
+**⚠ Missing rate limiting**
 
-🧨 EF Core raw SQL risks
+**🧨 EF Core raw SQL risks**
 
-🧱 Middleware ordering problems
+**🧱 Middleware ordering problems**
 
-📦 Missing production configs
+**📦 Missing production configs**
 
-🛑 Debug logging in production
+**🛑 Debug logging in production**
 
 and many more...
 
 ✨ Features
 🔍 Production-First Rules
 
-Focused on real ASP.NET production misconfiguration risks.
+### Focused on real ASP.NET production misconfiguration risks.
 
-📊 Risk Scoring
+## 📊 Risk Scoring
 
 Each scan generates:
 
@@ -55,7 +55,7 @@ Severity breakdown
 
 Status summary
 
-📄 Multiple Output Formats
+## 📄 Multiple Output Formats
 
 JSON
 
@@ -63,7 +63,7 @@ HTML
 
 SARIF (CI/CD integration)
 
-📈 Dashboard
+## 📈 Dashboard
 
 Interactive web dashboard:
 
@@ -75,24 +75,25 @@ Export ZIP bundles
 
 Risk overview
 
-🚦 CI/CD Ready
+## 🚦 CI/CD Ready
 
 Fail builds automatically:
 
 --fail-on=critical
 --fail-on=high
-🧠 Baseline Support
+## 🧠 Baseline Support
 
 Track only new critical issues over time.
 
-📦 Installation
+## 📦 Installation
 Install as a .NET Tool
 dotnet tool install GuardTool.Tool --add-source <path-to-nupkg>
 
 Or update:
 
 dotnet tool update GuardTool.Tool --add-source <path-to-nupkg>
-🧪 Usage
+
+## 🧪 Usage
 🔍 Scan a project
 guardtool scan --root .
 With HTML + SARIF
@@ -127,6 +128,7 @@ Each scan generates:
 yyyyMMdd_HHmmss_report.json
 yyyyMMdd_HHmmss_report.html
 yyyyMMdd_HHmmss_report.sarif.json
+
 🧱 Project Architecture
 GuardTool.Core        → Rules engine, scanning logic
 GuardTool.Cli         → .NET tool entry point
@@ -135,6 +137,7 @@ GuardTool.Dashboard   → Razor Pages dashboard
 GitHub Actions
 - name: Run GuardTool
   run: guardtool scan --root . --fail-on=critical
+  
 📌 Command Reference
 scan
 guardtool scan <rootPath>
@@ -151,7 +154,8 @@ guardtool dashboard <rootPath>
     | --root <rootPath>
     [--out <dir>]
     [--port=5180]
-🟢 Community Edition
+    
+## 🟢 Community Edition
 
 The current version includes:
 
@@ -165,7 +169,7 @@ JSON / HTML / SARIF export
 
 Baseline tracking
 
-🔵 Pro Edition (Planned)
+## 🔵 Pro Edition (Planned)
 
 Advanced JWT validation analysis
 
@@ -185,7 +189,7 @@ Slack / Teams alerts
 
 Policy configuration files
 
-🎯 Roadmap
+## 🎯 Roadmap
 
  Pro licensing system
 
@@ -199,7 +203,7 @@ Policy configuration files
 
  Custom rule authoring SDK
 
-🛡 Philosophy
+## 🛡 Philosophy
 
 GuardTool is built on one principle:
 
